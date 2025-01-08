@@ -2,6 +2,13 @@ body{
     background: linear-gradient(90deg, #1b0f24, #3f2455);
     color: whitesmoke;
 }
+.inputgoal{
+    background-color: black;
+    color: whitesmoke;
+    display: block;
+    width: 50%;
+    text-align: center;
+}
 .info{
     width: 70%;
     margin: auto;

@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="inputgoal">
+        <form class="goalform">
+            <input type="text" id="goal" placeholder="Tavoitepisteet">
+        </form>
+    </div>
     <div class="info">
         <h1></h1>
 
@@ -22,7 +27,7 @@
             
         </p>
 
-        <p class="displayrolls" id="rolls">
+        <p id="rolls">
 
         </p>
     </div>
@@ -58,8 +63,8 @@
         
     </div>
     
-    <button id="rolldice">Heitä</button>
-    <button id="stopturn">Lopeta vuoro</button>
+    <button id="rolldice" onclick="rolldice()">Heitä</button>
+    <button id="stopturn" onclick="switchTurn()">Lopeta vuoro</button>
     
 
     
