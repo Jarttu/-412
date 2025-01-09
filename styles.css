@@ -2,13 +2,72 @@ body{
     background: linear-gradient(90deg, #1b0f24, #3f2455);
     color: whitesmoke;
 }
-.inputgoal{
+/*splash-start*/
+.splash-container{
+    cursor: pointer;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 95%;
+    width: 95%;
+    transform: translate(-50%, -50%);
     background-color: black;
+    opacity: 1;
+    transition: all ease-in-out 500ms;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.splash-container.hidden{
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity ease-in-out 500ms;
+}
+
+.splash-header{
     color: whitesmoke;
-    display: block;
-    width: 50%;
     text-align: center;
 }
+
+.splash-content{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+}
+
+#goalinput{
+    padding: 10px;
+    width: 50%;
+    font-size: 16px;
+}
+
+.click{
+    padding: 10px 10px;
+    background-color: #3f2455;
+    color: whitesmoke;
+    border: none;
+    cursor: pointer;
+}
+
+.click:hover{
+    background-color: #1b0f24;
+}
+
+.game-content{
+    display: none;
+    text-align: center;
+    color: whitesmoke;
+    margin-top: 20px;
+}
+
+.game-content.visible{
+    display: block;
+}
+
+/*splash-end*/
 .info{
     width: 70%;
     margin: auto;
@@ -37,4 +96,9 @@ img{
     margin: 0px 10px;
     text-align:center;
     gap: 10px;
+}
+.button:disabled{
+    background-color: #3f2455;
+    color: #1b0f24;
+    cursor: not-allowed;
 }

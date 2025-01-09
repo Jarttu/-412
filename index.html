@@ -7,66 +7,75 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="inputgoal">
-        <form class="goalform">
-            <input type="text" id="goal" placeholder="Tavoitepisteet">
+
+    <div class="splash-container">
+        <h3 class="splash-header">Aseta tavoitepisteet</h3>
+        <p class="splash-header">(Oletus 100)</p>
+        <form class="splash-content" id="goalform">
+            <input type="text" id="goalinput" placeholder="Tavoitepisteet">
+            <button type="submit" value="Add" class="click">Aseta</button>
         </form>
     </div>
-    <div class="info">
-        <h1></h1>
 
-        <div class="dice-container">
-            <img />
+    <div class="game-content" id="gamecontent">
+        <div class="info">
+            <h1 id ="result"></h1>
+            <p id="goaltext">
+    
+            </p>
+            <div class="dice-container">
+                <img />
+                
+            </div>
+    
+        </div>
+    
+        <div>
+            <p id="playerturn">
+                
+            </p>
+    
+            <p id="rolls">
+    
+            </p>
+        </div>
+    
+        <div id="display">
+    
+            <div>
+                <h4>Kokonaispisteet</h4>
+                <div class="pointstotal">
+                    <p id="p1pointstotal">
+                        
+                    </p>
+            
+                    <p id="p2pointstotal">
+                        
+                    </p>
+                </div>
+            </div>
+            
+            <div>
+                <h4>Pisteet tässä kierroksessa</h4>
+                <div class="pointsround">
+                    <p id="p1pointsround">
+                        
+                    </p>
+            
+                    <p id="p2pointsround">
+                        
+                    </p>
+                </div>
+            </div>
+            
             
         </div>
-
+        
+        <button id="rolldice" onclick="rolldice()">Heitä</button>
+        <button id="stopturn" onclick="switchTurn()">Lopeta vuoro</button><br><br>
+        
+        <button id = "restartgame" onclick="restartGame()">Pelaa uudestaan</button>
     </div>
-
-    <div>
-        <p id="playerturn">
-            
-        </p>
-
-        <p id="rolls">
-
-        </p>
-    </div>
-
-    <div id="display">
-
-        <div>
-            <h4>Kokonaispisteet</h4>
-            <div class="pointstotal">
-                <p id="p1pointstotal">
-                    
-                </p>
-        
-                <p id="p2pointstotal">
-                    
-                </p>
-            </div>
-        </div>
-        
-        <div>
-            <h4>Pisteet tässä kierroksessa</h4>
-            <div class="pointsround">
-                <p id="p1pointsround">
-                    
-                </p>
-        
-                <p id="p2pointsround">
-                    
-                </p>
-            </div>
-        </div>
-        
-        
-    </div>
-    
-    <button id="rolldice" onclick="rolldice()">Heitä</button>
-    <button id="stopturn" onclick="switchTurn()">Lopeta vuoro</button>
-    
-
     
     <script src="main.js"></script>
 </body>
