@@ -1,8 +1,9 @@
-body{
+body {
     background: linear-gradient(90deg, #1b0f24, #3f2455);
     color: whitesmoke;
 }
-/*splash-start*/
+
+/*splash1-start*/
 .splash-container{
     cursor: pointer;
     position: fixed;
@@ -44,6 +45,7 @@ body{
     font-size: 16px;
 }
 
+
 .click{
     padding: 10px 10px;
     background-color: #3f2455;
@@ -56,6 +58,69 @@ body{
     background-color: #1b0f24;
 }
 
+/*splash1-end*/
+
+/*splash2-start*/
+.splash-2{
+    cursor: pointer;
+    position: fixed;
+    pointer-events: none;
+    top: 50%;
+    left: 50%;
+    height: 95%;
+    width: 95%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    opacity: 0;
+    transition: all ease-in-out 500ms;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9998;
+}
+
+.splash-2.active{
+    opacity: 1;
+    display: flex;
+    pointer-events: all;
+}
+.splash-content-2{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    opacity: 1;
+    text-align: center;
+}
+.splash-content-2.hidden{
+    display: none;
+    opacity: 0;
+    pointer-events: none;
+}
+.nameform{
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+}
+.nameform.visible{
+    opacity: 1;
+    display: flex;
+    pointer-events: all;
+}
+#playerinput{
+    padding: 10px;
+    width: 65%;
+    font-size: 16px;
+}
+
+.player-name-input{
+    padding: 10px;
+    width: 65%;
+    font-size: 16px;
+}
+
 .game-content{
     display: none;
     text-align: center;
@@ -66,17 +131,8 @@ body{
 .game-content.visible{
     display: block;
 }
+/*splash2-end*/
 
-/*splash-end*/
-.info{
-    width: 70%;
-    margin: auto;
-    text-align: center;
-}
-h1{
-    font-size: 6rem;
-    margin: 20px;
-}
 .dice-container{
     display: flex;
     text-align: center;
@@ -84,21 +140,4 @@ h1{
 }
 img{
     width: 320px;
-}
-.pointstotal{
-    display: inline-flex;
-    margin: 0px 10px;
-    text-align: center;
-    gap: 10px;
-}
-.pointsround{
-    display: inline-flex;
-    margin: 0px 10px;
-    text-align:center;
-    gap: 10px;
-}
-.button:disabled{
-    background-color: #3f2455;
-    color: #1b0f24;
-    cursor: not-allowed;
 }
